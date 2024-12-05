@@ -27,7 +27,7 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"src/components/topHeader.jsx"
+		"src/components/TopHeader.jsx"
 	],
 	"exclude": ["node_modules"]
 }

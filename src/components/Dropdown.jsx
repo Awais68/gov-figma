@@ -14,22 +14,25 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { FiChevronDown } from "react-icons/fi";
 
-export default function DropdownMenu() {
+export function DropDown() {
 	const [position, setPosition] = React.useState("bottom");
 
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant='outline'>Open</Button>
+				<Button variant='outline ' className='bg-black text-white'>
+					English <FiChevronDown size={24} />
+				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='w-56'>
-				<DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+				<DropdownMenuLabel>listing </DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-					<DropdownMenuRadioItem value='top'>Top</DropdownMenuRadioItem>
-					<DropdownMenuRadioItem value='bottom'>Bottom</DropdownMenuRadioItem>
-					<DropdownMenuRadioItem value='right'>Right</DropdownMenuRadioItem>
+					<DropdownMenuRadioItem value='top'>Spanish</DropdownMenuRadioItem>
+					<DropdownMenuRadioItem value='bottom'>Arabic</DropdownMenuRadioItem>
+					<DropdownMenuRadioItem value='right'>Urdu</DropdownMenuRadioItem>
 				</DropdownMenuRadioGroup>
 			</DropdownMenuContent>
 		</DropdownMenu>

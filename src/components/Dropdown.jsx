@@ -16,18 +16,17 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { FiChevronDown } from "react-icons/fi";
 
-export function DropDown({ text, bgColor, }) {
+export function DropDown({ text }) {
 	const [position, setPosition] = React.useState("bottom");
 
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-
 				<Button
 					variant='outline '
-					bgColor={bgColor}
-					icon={<FiChevronDown size={24} />}>
-					{""}
+					// bgColor={bgColor}
+					icon={<FiChevronDown size={24}  />}>
+					{"English"}
 				</Button>
 
 				{/* */}

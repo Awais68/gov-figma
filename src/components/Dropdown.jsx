@@ -1,5 +1,3 @@
-/** @format */
-
 "use client";
 
 import * as React from "react";
@@ -14,19 +12,18 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { FiChevronDown } from "react-icons/fi";
+import { FiChevronDown, FiChevronRight, FiChevronUp } from "react-icons/fi";
 
-export function DropDown({ text }) {
+export function DropDown({ text,dropdownTitle,dropdownIcon }) {
 	const [position, setPosition] = React.useState("bottom");
 
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
 				<Button
-					variant='outline '
-					// bgColor={bgColor}
-					icon={<FiChevronDown size={24}  />}>
-					{"English"}
+					variant='outline '>
+					{dropdownTitle ? dropdownTitle : 'Dropdown Title'}
+					{dropdownIcon}
 				</Button>
 
 				{/* */}

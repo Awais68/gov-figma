@@ -16,23 +16,29 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { FiChevronDown } from "react-icons/fi";
 
-export function DropDown() {
+export function DropDown({ text, bgColor, }) {
 	const [position, setPosition] = React.useState("bottom");
 
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant='outline ' className='bg-black text-white'>
-					English <FiChevronDown size={24} />
+
+				<Button
+					variant='outline '
+					bgColor={bgColor}
+					icon={<FiChevronDown size={24} />}>
+					{""}
 				</Button>
+
+				{/* */}
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='w-56'>
 				<DropdownMenuLabel>listing </DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-					<DropdownMenuRadioItem value='top'>Spanish</DropdownMenuRadioItem>
-					<DropdownMenuRadioItem value='bottom'>Arabic</DropdownMenuRadioItem>
-					<DropdownMenuRadioItem value='right'>Urdu</DropdownMenuRadioItem>
+					<DropdownMenuRadioItem value='top'>{text}</DropdownMenuRadioItem>
+					<DropdownMenuRadioItem value='bottom'>{text}</DropdownMenuRadioItem>
+					<DropdownMenuRadioItem value='right'>{text}</DropdownMenuRadioItem>
 				</DropdownMenuRadioGroup>
 			</DropdownMenuContent>
 		</DropdownMenu>
